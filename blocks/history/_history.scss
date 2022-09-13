@@ -1,0 +1,130 @@
+.information__container {
+    max-width: 1129px;
+    padding: 5px 5px 0;
+    margin: 0 auto;
+}
+.history {
+    display: flex;
+    margin-bottom: 122px;
+    &__text {
+        display: flex;
+        flex-direction: column;
+        width: 444px;
+        height: 422px;
+
+        &-title {
+            font-family: 'Tinos';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 54px;
+            line-height: 62px;
+            padding-bottom: 21px;
+            text-align: center;
+            span {
+                color: #D67E34;
+            }
+        }
+        &-body {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            text-align: center;
+            color: #656363;
+            padding-bottom: 60px;
+
+        }
+        &-numbers {
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
+    &__photos {
+        width: 539px;
+        height: 498px;
+        margin-left: 125px;
+        position: relative;
+    }
+}
+.numbers {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 54px;
+    text-align: center;
+    color: #BC9060;
+    span {
+        font-size: 20px;
+        line-height: 27px;
+        color: #000000;
+
+    }
+}
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__text {
+        width: 601px;
+        height: 173px;
+        &_big {
+            font-family: 'Tinos';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 52px;
+            line-height: 60px;
+            color: #D67E34;
+            padding-bottom: 20px;
+        }
+        &_adv {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 33px;
+            color: #FFFFFF;
+        }
+    }
+    &__button {
+        button {
+            width: 157px;
+            height: 47px;
+            background-color: #FF7400;
+            color: #fff;
+            border-radius: 4px;
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 19px;
+        }
+    }
+}
+.photos-item {
+    img {
+        position: absolute;
+    }
+}
+#first {
+    z-index: 2;
+    top: 198px;
+    left: 285px;
+}
+#second {
+    top: 72px;
+    z-index: 2;
+    left: 0px;
+}
+#third {
+    top: 0px;
+    left: 190px;
+    z-index: 1;
+}
+#forth {
+    top: 34px;
+    left: 285px;
+}

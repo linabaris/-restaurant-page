@@ -1,0 +1,29 @@
+.gakery__container {
+    max-width: 1129px;
+    padding: 0 5px;
+    margin: 0 auto;
+}
+.galery__title {
+    font-family: 'Tinos';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 62px;
+    text-align: center;
+    margin-bottom: 60px;
+    span {
+        color: #D67E34;
+    }
+}
+.galery__photos {
+    display: grid;
+    grid-template-rows: 274px 274px;
+    gap: 30px;
+
+    &-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+
+    }
+}

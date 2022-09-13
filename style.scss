@@ -1,0 +1,204 @@
+////////ОБНУЛЕНИЕ//////
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+
+.container {
+     width: 100%;
+     background-image: url(./assets/img/background.png);
+     height: 800px;
+     background-repeat: no-repeat;
+     background-size: 100%;
+    
+}
+.header {
+     max-width: 1129px;
+     margin: 0 auto;
+     padding: 0 5px;
+	&__menu {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 50px;
+     }
+	&__logo { 
+        margin-right: 268px;
+    }
+	&__nav {
+        flex-grow: 1;
+     }
+	&__actions {
+        display: flex;
+     }
+	&__greeting { }
+	&__info { }
+}
+.menu { }
+.logo { }
+.nav {
+	&__list {
+        display: flex;
+        flex-flow: row nowrap;
+     }
+	&__item {
+          margin-right: 25px;
+          a {
+               font-family: 'Open Sans';
+               font-style: normal;
+               font-weight: 700;
+               font-size: 14px;
+               line-height: 19px;
+               color: #fff;
+          }
+     }
+	&__cart { }
+	&__cart-icons { }
+}
+.cart { }
+.actions {
+	&__contact { }
+	&__telephone {
+          display: flex;
+      }
+	&__icon { }
+	&__number {
+          span {
+               font-family: 'Open Sans';
+               font-style: normal;
+               font-weight: 700;
+               font-size: 18px;
+               line-height: 25px;
+               color: #fff;
+          }
+      }
+	&__text {
+          span {
+               display: inline-block;
+               max-width: 154px;
+               font-family: 'Open Sans';
+               font-style: normal;
+               font-weight: 400;
+               font-size: 14px;
+               line-height: 19px;
+               color: #fff;
+          }
+      }
+	&__book { }
+	&__btn {
+          margin-left: 45px;
+      }
+	&__btn-book {
+          width: 157px;
+          height: 47px;
+          background-color: #FF7400;
+          color: #fff;
+          border-radius: 4px;
+          font-family: 'Open Sans';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 19px;
+     }
+}
+.telephone-icon { }
+
+.greeting {
+	&__text {
+          display: grid;
+          font-family: 'Tinos';
+          font-style: normal;
+          font-weight: 400;
+      }
+	&__btn { }
+     span {
+     }
+}
+.text-welcome { 
+     color: #FF7400;
+     font-size: 50px;
+     line-height: 57px;
+     padding: 204px 0 0 33px;
+}
+.text-big {
+     color: #FF7400;
+     font-size: 80px;
+     line-height: 92px;
+     padding-left: 9px;
+ }
+.text-tagline { 
+     color: #fff;
+     font-family: 'Open Sans';
+     font-style: normal;
+     font-weight: 400;
+     font-size: 18px;
+     line-height: 25px;
+}
+.btn-menu {
+     width: 157px;
+     height: 47px;
+     background-color: #FF7400;
+     color: #fff;
+     border-radius: 4px;
+     font-family: 'Open Sans';
+     font-style: normal;
+     font-weight: 700;
+     font-size: 14px;
+     line-height: 19px;
+}
+.footer img{
+     width: 100%;
+}
+@import './blocks/card';
+.info {
+     display: flex;
+     justify-content: space-between;
+     margin-top: 124px;
+}
+
+@import './blocks/cook/cook';
+.cook {
+     padding:100px 0 150px;  
+}
+
+@import './blocks/menu/menu';
+.menu {
+     background-image: url('./assets/img/background__menu.png');
+     padding: 100px 0 226px;
+
+}
+
+@import './blocks/galery/galery';
+.galery {
+     padding-top: 101px;
+}
+
+@import './blocks/history/history';
+.history {
+     padding: 150px 0 0;
+}
+
+@import './blocks/feedback/feedback';
+.feedback {
+     background-color: #E5E5E5;
+     padding: 105px 0;
+}
+
+@import './blocks/dishes/dishes';
+.offer {
+     padding: 132px 0 150px;
+}
+
+

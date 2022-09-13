@@ -1,0 +1,17 @@
+mixin menuCard(options)
+    .menu__card
+        .card__img
+            img(src="./assets/img/burger.png" alt="").img-round
+            .card__img-price 420
+        .card__title=options.title
+        .card__description=options.description
+        .card__btn
+            button.btn-order ЗАКАЗАТЬ        
+.menu
+    .menu__container 
+        .menu__title
+            span Наше меню
+        .menu__cards    
+            +menuCard({title:'Гамбургер макси', description:'Максимально толстый слой мяса'})
+            +menuCard({title:'Гамбургер макси', description:'Максимально толстый слой мяса'})
+            +menuCard({title:'Гамбургер макси', description:'Максимально толстый слой мяса'})
