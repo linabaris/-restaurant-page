@@ -4,19 +4,7 @@
         padding: 0 5px;
         margin: 0 auto;
     }
-    &__title {
-        font-family: 'Tinos';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 54px;
-        line-height: 62px;
-        color: #000000;
-        padding-bottom: 139px;
-        text-align: center;
-        span {
-            color: #D67E34;
-        }
-    }
+
     &__body {
         display: flex;
         gap: 30px;

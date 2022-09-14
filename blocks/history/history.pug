@@ -1,9 +1,10 @@
+include ../button/button.pug
+include ../title/title.pug
 .information
     .information__container
         .history
             .history__text
-                .history__text-title Наша 
-                    span История
+                +title({difference:true, type:'history', text1:'Наша', text2:'История'})
                 .history__text-body Как и у любого другого самобытного места, у нас есть своя, особая история. Идея ресторана пришла основателям неожиданно. Во время прогулки по лесу создатель нашего ресторана застрял в сотнях километров от ближайшего населенного пункта. Вдали от цивилизации и связи им пришлось навремя обустровать себе нехитрый быт, добывать и готовить себе еду.
                 .history__text-numbers
                     .numbers 93
@@ -25,5 +26,4 @@
             .banner__text
                 .banner__text_big Отпразднуйте в одном из самых лучших ресторанов.
                 .banner__text_adv Только в этом месяце бизнес-ланч от 250 ₽
-            .banner__button
-                button ЗАКАЗ СТОЛИКА
+            +button({type:'banner', text:'ЗАКАЗ СТОЛИКА'})

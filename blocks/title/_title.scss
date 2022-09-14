@@ -1,0 +1,16 @@
+.title {
+    font-family: 'Tinos';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 62px;
+    padding-bottom: 21px;
+    text-align: center;
+    color: #FFFFFF;
+    &_black {
+        color: black;
+    }
+    &_orange {
+        color: #D67E34;
+    }
+}

@@ -99,18 +99,6 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 	&__book { }
 	&__btn {
           margin-left: 45px;
-      }
-	&__btn-book {
-          width: 157px;
-          height: 47px;
-          background-color: #FF7400;
-          color: #fff;
-          border-radius: 4px;
-          font-family: 'Open Sans';
-          font-style: normal;
-          font-weight: 700;
-          font-size: 14px;
-          line-height: 19px;
      }
 }
 .telephone-icon { }
@@ -145,18 +133,6 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
      font-weight: 400;
      font-size: 18px;
      line-height: 25px;
-}
-.btn-menu {
-     width: 157px;
-     height: 47px;
-     background-color: #FF7400;
-     color: #fff;
-     border-radius: 4px;
-     font-family: 'Open Sans';
-     font-style: normal;
-     font-weight: 700;
-     font-size: 14px;
-     line-height: 19px;
 }
 .footer img{
      width: 100%;
@@ -202,3 +178,6 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 }
 
 
+@import './blocks/button/button';
+
+@import './blocks/title/title';

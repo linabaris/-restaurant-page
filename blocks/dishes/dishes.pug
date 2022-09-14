@@ -1,7 +1,7 @@
+include ../title/title.pug
 .offer
     .offer__container
-        .offer__title Наши 
-            span Блюда
+        +title({difference:true, type:'offer', text1:'Наши', text2:'Блюда'})
         .offer__body
             .offer__photo
                 img(src="./assets/img/offer.png" alt="photo")

@@ -9,20 +9,6 @@
     justify-content: space-between;
     }
 }
-.menu__title {
-    text-align: center;
-    margin-bottom: 138px;
-    span {
-        font-family: 'Tinos';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 54px;
-        line-height: 62px;
-        color: #FFFFFF;
-        text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
-    }
-    
-}
 
 .menu__card {
     width: 350px;
@@ -47,18 +33,6 @@
     font-size: 16px;
     line-height: 22px;
     margin-bottom: 22px;
-}
-.btn-order {
-    width: 157px;
-     height: 47px;
-     background-color: #FF7400;
-     color: #fff;
-     border-radius: 4px;
-     font-family: 'Open Sans';
-     font-style: normal;
-     font-weight: 700;
-     font-size: 14px;
-     line-height: 19px;
 }
 
 .card__img {

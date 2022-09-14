@@ -1,3 +1,4 @@
+include ./blocks/button/button.pug
 doctype html
 html(lang="en")
     head
@@ -36,15 +37,13 @@ html(lang="en")
                             .actions__text
                                 span Свяжитесь с нами для бронирования
                         .actions__book
-                            .actions__btn
-                                button.actions__btn-book ЗАКАЗ СТОЛИКА
+                            +button({type:'book', text:'ЗАКАЗ СТОЛИКА'})
                 .header__greeting.greeting
                     .greeting__text
                         span.text-welcome Добро пожаловать в
                         span.text-big Наш ресторан
                         span.text-tagline ДОМ ЛУЧШЕЙ ЕДЫ
-                    .greeting__btn
-                        button.btn-menu VIEW MENU
+                    +button({type:'menu', text:'VIEW MENU'})
                 .header__info.info
                     .info__card
                         .info__card-img.card-img

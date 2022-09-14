@@ -1,7 +1,7 @@
+include ../title/title.pug
 .galery
-    .gakery__container
-        .galery__title Галерея 
-            span блюд
+    .galery__container
+        +title({difference:true, type:'galery', text1:'Галерея', text2:'блюд'})
         .galery__photos
             .galery__photos-row.photos
                 .photos__item

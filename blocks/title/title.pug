@@ -1,0 +1,7 @@
+mixin title(atributes)
+    if atributes.difference
+        div.title(class=`title__${atributes.type}`)
+            span.title_black(class=`title__${atributes.type}`)=atributes.text1
+            span.title_orange(class=`title__${atributes.type}`)=` ${atributes.text2}`
+    else
+        div.title(class=`title__${atributes.type}`)=atributes.text
