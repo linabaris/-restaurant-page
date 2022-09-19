@@ -9,4 +9,18 @@ button {
     font-weight: 700;
     font-size: 14px;
     line-height: 19px;
+    box-shadow: inset 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+    
+}
+
+button:active{
+    transform: scale(0.95);
+    box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 320px) {
+    button {
+        width: 139px;
+        height: 43px;
+    }
+    
 }

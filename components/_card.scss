@@ -1,0 +1,54 @@
+.card {
+    &__container {
+        padding: 10px;
+        background-color: #fff;
+        width: 349px;
+        height: 328px;
+        box-shadow: 10px 10px 40px 20px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+    }
+    &__img {
+        margin-top: 30px;
+        margin-bottom: 4px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__title, &__text {
+        font-family: 'Tinos';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 30px;
+        color: #2C2C2C;
+        text-align: center;
+        &_highlight {
+            color: #BC9060;
+        }
+    }
+    &__text {
+        color: #656363;
+    }
+}
+@media (max-width: 320px) {
+    .info {
+        gap: 14px;
+    }
+    .card__container {
+        width: 290px;
+        height: 276px;
+    }
+    .card__text {
+        font-size: 22px;
+        line-height: 25px;
+    }
+    .card__container {
+        .card__img {
+            width: 89px;
+            height: 89px;
+        }
+    }
+    .card__title {
+        margin-bottom: 6px;
+    }
+}

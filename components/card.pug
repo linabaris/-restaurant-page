@@ -1,0 +1,9 @@
+mixin card(atributes)
+    div.card(class=`card__${atributes.type}`)
+        .card__container
+            .card__img 
+                img(src=`${atributes.url}`, alt="graphic")
+            .card__title
+                span.card__title_black=atributes.black
+                span.card__title_highlight=atributes.beige
+            .card__text=atributes.text

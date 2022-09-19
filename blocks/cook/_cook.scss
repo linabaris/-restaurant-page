@@ -1,3 +1,6 @@
+.cook {
+    padding:100px 0 150px;  
+}
 .cook__container {
     max-width: 1129px;
     margin: 0 auto;
@@ -5,4 +8,19 @@
 .cook__foto {
     display: flex;
     justify-content: space-between;
+}
+
+@media (max-width: 320px) {
+    .cook {
+        padding: 71px 0 21px;
+    }
+    .cook__foto {
+        flex-direction: column;
+        gap: 17px;
+        img {
+            width: 90%;
+            display: block;
+            margin: 0 auto;
+        }
+    }
 }

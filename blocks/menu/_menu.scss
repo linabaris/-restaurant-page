@@ -43,7 +43,7 @@
     width: 225px;
     height: 225px;
     margin-bottom: 22px;
-    margin-top: 80px;
+    margin-top: 40px;
     border-radius: 100%;
 }
 
@@ -60,9 +60,21 @@
     font-size: 30px;
     line-height: 33px;
     color: #FFFFFF;
-    top: 210px;
+    top: 180px;
     right: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media (max-width: 320px) {
+    .menu__cards {
+        justify-content: center;
+    }
+    .menu__card:nth-child(2), .menu__card:nth-child(3)  {
+        display: none;
+    }
+    .menu__card {
+        width: 90%;
+    }
 }

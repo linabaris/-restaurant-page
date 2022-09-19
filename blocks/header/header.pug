@@ -1,0 +1,30 @@
+.header__menu 
+    .header__logo.logo
+        img(src="./assets/icons/LOGO.svg" alt="logo")
+    .header__nav.nav
+        ul.nav__list
+            li.nav__item
+                a(href="#") ГЛАВНАЯ 
+            li.nav__item
+                a(href="#") МЕНЮ
+            li.nav__item
+                a(href="#") О НАС
+            li.nav__item
+                a(href="#") БРОНЬ
+            li.nav__item
+                a.nav__cart.cart
+                    img.nav__cart-icons(src="./assets/icons/cart.svg" alt="cart" width='30px' height='30px')
+    .header__actions.actions
+        .actions__contact
+            .actions__telephone
+                .actions__icon.telephone-icon
+                    img(src="./assets/icons/phone.svg" alt="telephone")
+                .actions__number
+                    span +999-888-76-54
+            .actions__text
+                span Свяжитесь с нами для бронирования
+        .actions__book
+            +button({type:'book', text:'ЗАКАЗ СТОЛИКА'})
+    .header__burger.burger
+        button.burger__button(type='button' id='navToggle')
+            img.burger__icon(src="./assets/icons/menu_burger.svg", alt="menu_burger")

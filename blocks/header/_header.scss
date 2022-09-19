@@ -1,0 +1,108 @@
+.header {
+    max-width: 1129px;
+    margin: 0 auto;
+    padding: 0 5px;
+   &__menu {
+        z-index: 50;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 50px;
+    }
+   &__logo { 
+       margin-right: 24.5%;
+   }
+   &__nav {
+       flex-grow: 1;
+    }
+   &__actions {
+       display: flex;
+       gap: 45px;
+    }
+    &__burger {
+        display: none;
+    }
+}
+.nav {
+	&__list {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+    &__list:after {
+        content: "";
+        display: block;
+        height: 50px;
+        width:2px;
+        background: #E5E5E5;
+    }
+	&__item {
+          margin-right: 25px;
+          a {
+               font-family: 'Open Sans';
+               font-style: normal;
+               font-weight: 700;
+               font-size: 14px;
+               line-height: 19px;
+               color: #fff;
+            }
+    }
+}
+.actions {
+	&__telephone {
+          display: flex;
+          gap: 8px;
+      }
+	&__number {
+          span {
+               font-family: 'Open Sans';
+               font-style: normal;
+               font-weight: 700;
+               font-size: 18px;
+               line-height: 25px;
+               color: #fff;
+          }
+      }
+	&__text {
+          span {
+               display: inline-block;
+               max-width: 154px;
+               font-family: 'Open Sans';
+               font-style: normal;
+               font-weight: 400;
+               font-size: 14px;
+               line-height: 19px;
+               color: #fff;
+          }
+      }
+	&__btn {
+          margin-left: 45px;
+     }
+}
+
+@media (max-width: 800px) {
+    .nav, .actions {
+        display: none;
+    }
+    .header__logo {
+        margin-right: 66%;
+        img {
+            width: 45px;
+            height: 31px;
+        }
+    }
+    .header__burger {
+        display: block;
+    }
+    .burger__button {
+        width: 31px;
+        height: 18px;
+        background-color:transparent;
+        
+    }
+    .header__menu {
+        padding-top: 20px;
+        justify-content: space-between;
+    }
+}

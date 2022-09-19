@@ -41,3 +41,33 @@
 .price {
     text-align: end;
 }
+
+@media (max-width: 320px) {
+    .offer__photo {
+        display: none;
+    }
+    .text {
+        flex-direction: column;
+    }
+    .offer__item-photo {
+        img {
+            width: 130px;
+            height: 113px;
+        }
+    }
+    .offer__item {
+        gap: 8px;
+        &-text {
+            .name {
+                font-size: 22px;
+            }
+            .price {
+                text-align: center;
+            }
+        }
+    }
+    .offer__list {
+        gap: 87px;
+    }
+
+}

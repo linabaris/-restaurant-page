@@ -14,3 +14,10 @@
         color: #D67E34;
     }
 }
+
+@media (max-width:320px) {
+    .title {
+        font-size: 40px;
+        line-height: 46px;
+    }
+}

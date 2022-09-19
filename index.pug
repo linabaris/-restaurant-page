@@ -1,4 +1,5 @@
 include ./blocks/button/button.pug
+include ./components/card.pug
 doctype html
 html(lang="en")
     head
@@ -9,59 +10,24 @@ html(lang="en")
         link(rel="stylesheet", href="style.css")
         title Restaurent
     body 
-        .container
+        .wrapper
             header.header
-                .header__menu
-                    .header__logo.logo
-                        img(src="./assets/icons/LOGO.svg", alt="logo")
-                    .header__nav.nav
-                        ul.nav__list
-                            li.nav__item
-                                a(href="#") ГЛАВНАЯ 
-                            li.nav__item
-                                a(href="#") МЕНЮ
-                            li.nav__item
-                                a(href="#") О НАС
-                            li.nav__item
-                                a(href="#") БРОНЬ
-                            li.nav__item
-                                a.nav__cart.cart
-                                    img.nav__cart-icons(src="./assets/icons/cart.svg", alt="cart" width='30px', height='30px')
-                    .header__actions.actions
-                        .actions__contact
-                            .actions__telephone
-                                .actions__icon.telephone-icon
-                                    img(src="./assets/icons/phone.svg", alt="telephone")
-                                .actions__number
-                                    span +999-888-76-54
-                            .actions__text
-                                span Свяжитесь с нами для бронирования
-                        .actions__book
-                            +button({type:'book', text:'ЗАКАЗ СТОЛИКА'})
+                include ./blocks/header/header.pug
                 .header__greeting.greeting
                     .greeting__text
                         span.text-welcome Добро пожаловать в
                         span.text-big Наш ресторан
-                        span.text-tagline ДОМ ЛУЧШЕЙ ЕДЫ
+                        .text__tagline
+                            span ДОМ ЛУЧШЕЙ ЕДЫ
                     +button({type:'menu', text:'VIEW MENU'})
                 .header__info.info
-                    .info__card
-                        .info__card-img.card-img
-                            img(src="./assets/icons/dish.svg", alt="dish")
-                        .info__card-title.card-title Магическая Атмосфера
-                        .info__card-text.card-text В нашем заведении царит магическая атмосфера наполненная вкусными ароматами
-                    .info__card
-                        .info__card-img.card-img
-                            img(src="./assets/icons/dish.svg", alt="dish")
-                        .info__card-title.card-title Лучшее качество Еды
-                        .info__card-text.card-text Качество нашей Еды - отменное!
-                    .info__card
-                        .info__card-img.card-img
-                            img(src="./assets/icons/dish.svg", alt="dish")
-                        .info__card-title.card-title Недорогая Еда
-                        .info__card-text.card-text Стоимость нашей Еды зависит только от ее количества. Качество всегда на высоте!
+                    +card({type:'info', url:'./assets/icons/dish.svg', black:'Магическая ', beige:'Атмосфера', text:'В нашем заведении царит магическая атмосфера наполненная вкусными ароматами'})
+                    +card({type:'info', url:'./assets/icons/dish.svg', black:'Лучшее качество ', beige:'Еды', text:'Качество нашей Еды - отменное!'})
+                    +card({type:'info', url:'./assets/icons/dish.svg', black:'Недорогая ', beige:'Еда', text:'Стоимость нашей Еды зависит только от ее количества. Качество всегда на высоте!'})
             <!-- подклчение раздела история -->
             include ./blocks/history/history.pug
+            <!-- подклчение раздела баннер -->
+            include ./blocks/banner/banner.pug
             <!-- подклчение раздела наши блюда -->
             include ./blocks/dishes/dishes.pug
             <!-- подклчение раздела меню -->

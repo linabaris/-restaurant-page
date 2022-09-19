@@ -15,7 +15,7 @@ ul li{list-style: none;}
 img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 
-.container {
+.wrapper {
      width: 100%;
      background-image: url(./assets/img/background.png);
      height: 800px;
@@ -23,131 +23,78 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
      background-size: 100%;
     
 }
-.header {
-     max-width: 1129px;
-     margin: 0 auto;
-     padding: 0 5px;
-	&__menu {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: flex-start;
-        align-items: center;
-        padding-top: 50px;
-     }
-	&__logo { 
-        margin-right: 268px;
-    }
-	&__nav {
-        flex-grow: 1;
-     }
-	&__actions {
-        display: flex;
-     }
-	&__greeting { }
-	&__info { }
-}
-.menu { }
-.logo { }
-.nav {
-	&__list {
-        display: flex;
-        flex-flow: row nowrap;
-     }
-	&__item {
-          margin-right: 25px;
-          a {
-               font-family: 'Open Sans';
-               font-style: normal;
-               font-weight: 700;
-               font-size: 14px;
-               line-height: 19px;
-               color: #fff;
-          }
-     }
-	&__cart { }
-	&__cart-icons { }
-}
-.cart { }
-.actions {
-	&__contact { }
-	&__telephone {
-          display: flex;
-      }
-	&__icon { }
-	&__number {
-          span {
-               font-family: 'Open Sans';
-               font-style: normal;
-               font-weight: 700;
-               font-size: 18px;
-               line-height: 25px;
-               color: #fff;
-          }
-      }
-	&__text {
-          span {
-               display: inline-block;
-               max-width: 154px;
-               font-family: 'Open Sans';
-               font-style: normal;
-               font-weight: 400;
-               font-size: 14px;
-               line-height: 19px;
-               color: #fff;
-          }
-      }
-	&__book { }
-	&__btn {
-          margin-left: 45px;
-     }
-}
-.telephone-icon { }
 
 .greeting {
+     width: 50%;
 	&__text {
           display: grid;
           font-family: 'Tinos';
           font-style: normal;
           font-weight: 400;
       }
-	&__btn { }
-     span {
-     }
 }
 .text-welcome { 
      color: #FF7400;
      font-size: 50px;
      line-height: 57px;
-     padding: 204px 0 0 33px;
+     padding: 204px 0 0;
+     text-align: center;
 }
 .text-big {
      color: #FF7400;
      font-size: 80px;
      line-height: 92px;
-     padding-left: 9px;
+     text-align: center;
  }
-.text-tagline { 
-     color: #fff;
-     font-family: 'Open Sans';
-     font-style: normal;
-     font-weight: 400;
-     font-size: 18px;
-     line-height: 25px;
+.text__tagline {
+     span {
+          color: #fff;
+          font-family: 'Open Sans';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 25px;
+          text-align: center;
+          margin: 12px 0 0;
+          padding: 0 5%;
+     }
+}
+
+.text__tagline {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+}
+.text__tagline:before, .text__tagline:after {
+     content: "";
+     display: block;
+     height: 1px;
+     width:10%;
+     background: #E5E5E5;
+}
+
+.btn-menu {
+     display: block;
+     margin: 21px auto 0;
 }
 .footer img{
      width: 100%;
 }
-@import './blocks/card';
 .info {
      display: flex;
      justify-content: space-between;
      margin-top: 124px;
 }
+@media (max-width: 320px) {
+     .header__info {
+          flex-direction: column;
+          align-items: center
+     }
+}
 
 @import './blocks/cook/cook';
-.cook {
-     padding:100px 0 150px;  
-}
+
 
 @import './blocks/menu/menu';
 .menu {
@@ -160,10 +107,15 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 .galery {
      padding-top: 101px;
 }
-
-@import './blocks/history/history';
 .history {
      padding: 150px 0 0;
+}
+@import './blocks/history/history';
+@media (max-width:320px) {
+     .history {
+          padding: 0 0 51px;
+          margin-bottom: 0;
+     }
 }
 
 @import './blocks/feedback/feedback';
@@ -181,3 +133,27 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 @import './blocks/button/button';
 
 @import './blocks/title/title';
+
+@import './components/card';
+
+@import './blocks/banner/banner';
+
+@import './blocks/header/header';
+
+@media (max-width:320px) {
+     .wrapper {
+          background-size: auto;
+     }
+
+     .text-welcome {
+          font-size: 30px;
+          line-height: 34px;
+     }
+     .text-big {
+          font-size: 40px;
+          line-height: 46px;
+     }
+     .greeting {
+          width: 100%;
+     }
+}
