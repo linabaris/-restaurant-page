@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cookie&amp;family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&amp;family=Tinos&amp;display=swap">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/app.js" defer> </script>
+    <title>Restaurent</title>
+  </head>
+  <body> 
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__menu"> 
+          <div class="header__logo logo"><img src="./assets/icons/LOGO.svg" alt="logo"></div>
+          <div class="header__nav nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a href="#">ГЛАВНАЯ </a></li>
+              <li class="nav__item"><a href="#menu">МЕНЮ</a></li>
+              <li class="nav__item"><a href="#about">О НАС</a></li>
+              <li class="nav__item"><a href="#book">БРОНЬ</a></li>
+              <li class="nav__item"><a class="nav__cart cart__icon" href="#" data-trigger=".cart"><img class="nav__cart-icons" src="./assets/icons/cart.svg" alt="cart" width="30px" height="30px"></a></li>
+            </ul>
+          </div>
+          <div class="header__actions actions">
+            <div class="actions__contact">
+              <div class="actions__telephone">
+                <div class="actions__icon telephone-icon"><img src="./assets/icons/phone.svg" alt="telephone"></div>
+                <div class="actions__number"><span>+999-888-76-54</span></div>
+              </div>
+              <div class="actions__text"><span>Свяжитесь с нами для бронирования</span></div>
+            </div>
+            <div class="actions__book">
+              <div class="button_type_book">
+                <button class="btn-book" data-atr="trigger">ЗАКАЗ СТОЛИКА</button>
+              </div>
+            </div>
+          </div>
+          <div class="header__burger burger">
+            <button class="burger__button" type="button" id="navToggle"><img class="burger__icon" src="./assets/icons/menu_burger.svg" alt="menu_burger"></button>
+          </div>
+        </div>
+        <div class="header__greeting greeting">
+          <div class="greeting__text"><span class="text-welcome">Добро пожаловать в</span><span class="text-big">Наш ресторан</span>
+            <div class="text__tagline"><span>ДОМ ЛУЧШЕЙ ЕДЫ</span></div>
+          </div>
+          <div class="button_type_menu">
+            <button class="btn-menu">VIEW MENU</button>
+          </div>
+        </div>
+        <div class="header__info info">
+          <div class="card card__info">
+            <div class="card__container">
+              <div class="card__img"> <img src="./assets/icons/dish.svg" alt="graphic"/></div>
+              <div class="card__title"><span class="card__title_black">Магическая </span><span class="card__title_highlight">Атмосфера</span></div>
+              <div class="card__text">В нашем заведении царит магическая атмосфера наполненная вкусными ароматами</div>
+            </div>
+          </div>
+          <div class="card card__info">
+            <div class="card__container">
+              <div class="card__img"> <img src="./assets/icons/dish.svg" alt="graphic"/></div>
+              <div class="card__title"><span class="card__title_black">Лучшее качество </span><span class="card__title_highlight">Еды</span></div>
+              <div class="card__text">Качество нашей Еды - отменное!</div>
+            </div>
+          </div>
+          <div class="card card__info">
+            <div class="card__container">
+              <div class="card__img"> <img src="./assets/icons/dish.svg" alt="graphic"/></div>
+              <div class="card__title"><span class="card__title_black">Недорогая </span><span class="card__title_highlight">Еда</span></div>
+              <div class="card__text">Стоимость нашей Еды зависит только от ее количества. Качество всегда на высоте!</div>
+            </div>
+          </div>
+        </div>
+      </header><!-- подклчение раздела история -->
+      <div class="information" id="about">
+        <div class="information__container">
+          <div class="history">
+            <div class="history__text">
+                    <div class="title title__history"><span class="title_black title__history">Наша</span><span class="title_orange title__history"> История</span></div>
+              <div class="history__text-body">Как и у любого другого самобытного места, у нас есть своя, особая история. Идея ресторана пришла основателям неожиданно. Во время прогулки по лесу создатель нашего ресторана застрял в сотнях километров от ближайшего населенного пункта. Вдали от цивилизации и связи им пришлось навремя обустровать себе нехитрый быт, добывать и готовить себе еду.</div>
+              <div class="history__text-numbers">
+                <div class="numbers">93<span>Напитки</span></div>
+                <div class="numbers">206<span>Еда</span></div>
+                <div class="numbers">71<span>Закуски</span></div>
+              </div>
+            </div>
+            <div class="history__photos">
+              <div class="photos-item"> <img id="first" src="./assets/img/history1.png" alt="photo"></div>
+              <div class="photos-item"><img id="second" src="./assets/img/history2.png" alt="photo"></div>
+              <div class="photos-item"><img id="third" src="./assets/img/history3.png" alt="photo"></div>
+              <div class="photos-item"><img id="forth" src="./assets/img/history4.png" alt="photo"></div>
+            </div>
+          </div>
+        </div>
+      </div><!-- подклчение раздела баннер -->
+      <div class="banner" id="book">
+        <div class="banner__container">
+          <div class="banner__text">
+            <div class="banner__text_big">Отпразднуйте в одном из самых лучших ресторанов.</div>
+            <div class="banner__text_adv">Только в этом месяце бизнес-ланч от 250 ₽</div>
+          </div>
+                <div class="button_type_banner">
+                  <button class="btn-banner">ЗАКАЗ СТОЛИКА</button>
+                </div>
+        </div>
+      </div><!-- подклчение раздела наши блюда -->
+      <div class="offer">
+        <div class="offer__container">
+                <div class="title title__offer"><span class="title_black title__offer">Наши</span><span class="title_orange title__offer"> Блюда</span></div>
+          <div class="offer__body">
+            <div class="offer__photo"><img src="./assets/img/offer.png" alt="photo"></div>
+            <div class="offer__list">
+              <div class="offer__item"> 
+                <div class="offer__item-photo"><img src="./assets/img/menu.png" alt="menu"></div>
+                <div class="offer__item-text"><span class="text"><span class="name">Гамбургер мини  </span><span class="price"> 220 ₽</span></span></div>
+              </div>
+              <div class="offer__item"> 
+                <div class="offer__item-photo"><img src="./assets/img/menu.png" alt="menu"></div>
+                <div class="offer__item-text"><span class="text"><span class="name">Гамбургер мини </span><span class="price"> 220 ₽</span></span></div>
+              </div>
+              <div class="offer__item"> 
+                <div class="offer__item-photo"><img src="./assets/img/menu.png" alt="menu"></div>
+                <div class="offer__item-text"><span class="text"> <span class="name">Гамбургер мини </span><span class="price"> 220 ₽</span></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- подклчение раздела меню -->
+      <div class="menu" id="menu">
+        <div class="menu__container"> 
+                <div class="title title__menu">Наше меню</div>
+          <div class="menu__cards">   
+                  <div class="menu__card">
+                    <div class="card__img"><img class="img-round" src="./assets/img/burger.png" alt="">
+                      <div class="card__img-price">420</div>
+                    </div>
+                    <div class="card__title">Гамбургер макси</div>
+                    <div class="card__description">Максимально толстый слой мяса</div>
+                          <div class="button_type_order">
+                            <button class="btn-order">ЗАКАЗАТЬ</button>
+                          </div>
+                  </div>
+                  <div class="menu__card">
+                    <div class="card__img"><img class="img-round" src="./assets/img/burger.png" alt="">
+                      <div class="card__img-price">420</div>
+                    </div>
+                    <div class="card__title">Гамбургер макси</div>
+                    <div class="card__description">Максимально толстый слой мяса</div>
+                          <div class="button_type_order">
+                            <button class="btn-order">ЗАКАЗАТЬ</button>
+                          </div>
+                  </div>
+                  <div class="menu__card">
+                    <div class="card__img"><img class="img-round" src="./assets/img/burger.png" alt="">
+                      <div class="card__img-price">420</div>
+                    </div>
+                    <div class="card__title">Гамбургер макси</div>
+                    <div class="card__description">Максимально толстый слой мяса</div>
+                          <div class="button_type_order">
+                            <button class="btn-order">ЗАКАЗАТЬ</button>
+                          </div>
+                  </div>
+          </div>
+        </div>
+      </div><!-- подклчение раздела отзывы -->
+      <div class="feedback">
+        <div class="feedback__container">
+          <div class="feedback__text">Я надолго запомню мой День рождения, проведённый в этом ресторане! Кусочек родной Армении!!! Отдельное спасибо за комплепент в виде фруктовой тарелки. Будем рекомендовать этот ресторан своим друзьям и родственникам также за рубежом, путешествующих в Санкт-Петербург!!!</div>
+          <div class="feedback__user">
+            <div class="feedback__user-avatar"><img src="./assets/img/avatar.png" alt="avatar"></div>
+            <div class="feedback__user-info">
+              <div class="feedback__user-status">Посетитель</div>
+              <div class="feedback__user-name">Николай</div>
+            </div>
+          </div>
+          <div class="feedback__slider">
+            <div class="feedback__slider-item"></div>
+            <div class="feedback__slider-item"></div>
+            <div class="feedback__slider-item active">  </div>
+          </div>
+        </div>
+      </div><!-- подклчение раздела галерея -->
+      <div class="galery">
+        <div class="galery__container">
+                <div class="title title__galery"><span class="title_black title__galery">Галерея</span><span class="title_orange title__galery"> блюд</span></div>
+          <div class="galery__photos">
+            <div class="photos__item-1"><img src="./assets/img/dish1.png" alt="Food"></div>
+            <div class="photos__item-2"><img src="./assets/img/dish2.png" alt="Food"></div>
+            <div class="photos__item-3"><img src="./assets/img/dish3.png" alt="Food"></div>
+            <div class="photos__item-4"><img src="./assets/img/dish2.png" alt="Food"></div>
+            <div class="photos__item-5"><img src="./assets/img/dish3.png" alt="Food"></div>
+            <div class="photos__item-6"><img src="./assets/img/dish1.png" alt="Food"></div>
+          </div>
+        </div>
+      </div><!-- подклчение раздела повара -->
+      <div class="cook">
+        <div class="cook__container">
+                <div class="title title__cook"><span class="title_black title__cook">Наши</span><span class="title_orange title__cook"> Повара</span></div>
+          <div class="cook__foto">
+            <div class="foto_item"><img src="./assets/img/cook1.png" alt="Foto"></div>
+            <div class="foto_item"><img src="./assets/img/cook2.png" alt="Foto"></div>
+            <div class="foto_item"><img src="./assets/img/cook3.png" alt="Foto"></div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer"><img src="./assets/img/background_footer.png" alt=""></footer>
+      <div class="scrollUp-btn">
+        <a href="#top"><span></span>Вверх</a>
+      </div>
+    </div>
+    <!-- подклчение модального окна -->
+    <div class="modal trigger">
+      <div class="modal__container">
+        <div class="modal__header"><span class="header__title_big">Бронирование</span><span class="header__title_mid">Заказать стол</span></div>
+        <div class="modal__text"><span class="modal__text_terms">При бронировании стола в пятницу, субботу, воскресенье и праздничные дни, а также всем компаниям от 6 человек, включается 10% от суммы чека по правилам бронирования</span></div>
+        <form class="modal__form" action="">
+          <div class="rest-group form-group">
+            <input type="text" placeholder="Выберите ресторан">
+          </div>
+          <div class="name-group form-group">
+            <input type="text" placeholder="Ваше имя">
+          </div>
+          <div class="guest-group form-group">
+            <select id="guests" name="guests">
+              <option value="0">Выберите количество</option>
+              <option value="1">1 гость</option>
+              <option value="2">2 гостя</option>
+              <option value="3">6+ гостей</option>
+              <option value="4">10 + гостей</option>
+            </select>
+          </div>
+          <div class="email-group form-group">
+            <input type="email" placeholder="Email адрес">
+          </div>
+          <div class="phone-group form-group">
+            <input type="tel" placeholder="Номер телефона">
+          </div>
+          <div class="comment-group form-group">
+            <input type="text" placeholder="Здесь можно написать ваши пожелания">
+          </div>
+          <div class="button-book">
+            <button class="btn" type="submit">Заказать</button>
+          </div>
+        </form>
+      </div>
+    </div><!-- подклчение окна корзины -->
+    <div class="cart hidden">
+      <div class="cart__container"> 
+        <div class="cart__close-btn"><a href="#"><img src="./assets/icons/close.svg" alt="close"></a></div>
+        <div class="cart__list-wrapper">
+        </div>
+        <div class="cart__check"><span class="check">Итого</span></div>
+        <div class="cart__actions">
+          <div class="cart__pay-btn">
+            <button class="pay-btn">ОПЛАТИТЬ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

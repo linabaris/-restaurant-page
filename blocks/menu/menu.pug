@@ -8,7 +8,7 @@ mixin menuCard(options)
         .card__title=options.title
         .card__description=options.description
         +button({type:'order', text:'ЗАКАЗАТЬ'})      
-.menu
+.menu(id='menu')
     .menu__container 
         +title({difference:false, type:'menu', text:'Наше меню'})
         .menu__cards    

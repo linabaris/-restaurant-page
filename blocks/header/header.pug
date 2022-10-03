@@ -6,13 +6,13 @@
             li.nav__item
                 a(href="#") ГЛАВНАЯ 
             li.nav__item
-                a(href="#") МЕНЮ
+                a(href="#menu") МЕНЮ
             li.nav__item
-                a(href="#") О НАС
+                a(href="#about") О НАС
             li.nav__item
-                a(href="#") БРОНЬ
+                a(href="#book") БРОНЬ
             li.nav__item
-                a.nav__cart.cart
+                a.nav__cart.cart__icon(href="#" data-trigger=".cart")
                     img.nav__cart-icons(src="./assets/icons/cart.svg" alt="cart" width='30px' height='30px')
     .header__actions.actions
         .actions__contact
@@ -24,7 +24,7 @@
             .actions__text
                 span Свяжитесь с нами для бронирования
         .actions__book
-            +button({type:'book', text:'ЗАКАЗ СТОЛИКА'})
+            +button({type:'book', text:'ЗАКАЗ СТОЛИКА', atributes: true, name_atr:'trigger'})
     .header__burger.burger
         button.burger__button(type='button' id='navToggle')
             img.burger__icon(src="./assets/icons/menu_burger.svg", alt="menu_burger")

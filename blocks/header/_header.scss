@@ -3,22 +3,23 @@
     margin: 0 auto;
     padding: 0 5px;
    &__menu {
-        z-index: 50;
         display: flex;
-        flex-flow: row nowrap;
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: center;
-        padding-top: 50px;
+        padding-top: 3.57rem;
     }
    &__logo { 
-       margin-right: 24.5%;
+       //margin-right: 24.5%;
+       flex-grow: 1;
    }
    &__nav {
-       flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
     }
    &__actions {
        display: flex;
-       gap: 45px;
+       justify-content: space-between;
+       flex-wrap: wrap;
     }
     &__burger {
         display: none;
@@ -27,8 +28,9 @@
 .nav {
 	&__list {
         display: flex;
-        flex-flow: row nowrap;
         align-items: center;
+        flex-wrap: wrap;
+        height: 100%;
     }
     &__list:after {
         content: "";
@@ -79,6 +81,14 @@
 	&__btn {
           margin-left: 45px;
      }
+
+    &__book {
+        margin: auto;
+    }
+
+    &__contact {
+        padding: 0 2rem;
+    }
 }
 
 @media (max-width: 800px) {

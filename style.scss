@@ -1,10 +1,16 @@
+///// 1200px
+// 992px
+// 768px
+// 480px
+// 320px
+
 ////////ОБНУЛЕНИЕ//////
 *{padding: 0;margin: 0;border: 0;}
 *,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
 :focus,:active{outline: none;}
 a:focus,a:active{outline: none;}
 nav,footer,header,aside{display: block;}
-html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:10px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
 input,button,textarea{font-family:inherit;}
 input::-ms-clear{display: none;}
 button{cursor: pointer;}
@@ -35,14 +41,14 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 }
 .text-welcome { 
      color: #FF7400;
-     font-size: 50px;
+     font-size: 5rem;
      line-height: 57px;
-     padding: 204px 0 0;
+     padding: 14.3rem 0 0;
      text-align: center;
 }
 .text-big {
      color: #FF7400;
-     font-size: 80px;
+     font-size: 8rem;
      line-height: 92px;
      text-align: center;
  }
@@ -81,16 +87,48 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 .footer img{
      width: 100%;
 }
+//btn scrollTop 
+.scrollUp-btn {
+     position: fixed;
+     bottom: 3rem;
+     right: 6rem;
+     display: none;
+     a {
+          width:6.4rem;
+          display: block;
+          text-align: center;
+          text-transform:uppercase;
+          text-decoration:none;
+          color:#FF7400;
+          transition: 1s;
+          font-size: 2rem;
+     }
+     a:hover {
+          color: #000;
+     }
+}
+
 .info {
      display: flex;
+     flex-wrap: wrap;
      justify-content: space-between;
-     margin-top: 124px;
+     margin-top: 10%;
 }
 @media (max-width: 320px) {
      .header__info {
           flex-direction: column;
           align-items: center
      }
+}
+
+@media (max-width:991px) {
+     .text-welcome {
+          font-size: 2.5rem;
+     }
+     .text-big {
+          font-size: 4rem;
+     }
+
 }
 
 @import './blocks/cook/cook';
@@ -157,3 +195,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
           width: 100%;
      }
 }
+
+@import './blocks/modal/modal';
+
+@import './blocks/cart/cart'

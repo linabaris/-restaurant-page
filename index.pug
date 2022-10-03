@@ -8,6 +8,8 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Cookie&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Tinos&display=swap")
         link(rel="stylesheet", href="style.css")
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+        script(src="./js/app.js", defer) 
         title Restaurent
     body 
         .wrapper
@@ -40,4 +42,10 @@ html(lang="en")
             include ./blocks/cook/cook.pug
             footer.footer
                 img(src="./assets/img/background_footer.png", alt="")
-            
+            .scrollUp-btn
+                a(href="#top") Вверх
+        <!-- подклчение модального окна -->
+        include ./blocks/modal/modal.pug
+
+        <!-- подклчение окна корзины -->
+        include ./blocks/cart/cart.pug

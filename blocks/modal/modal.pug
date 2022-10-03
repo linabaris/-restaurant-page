@@ -1,0 +1,27 @@
+.modal.trigger
+    .modal__container
+        .modal__header
+            span.header__title_big Бронирование
+            span.header__title_mid Заказать стол
+        .modal__text
+            span.modal__text_terms При бронировании стола в пятницу, субботу, воскресенье и праздничные дни, а также всем компаниям от 6 человек, включается 10% от суммы чека по правилам бронирования
+        form.modal__form(action="")
+            .rest-group.form-group
+                input(type="text", placeholder="Выберите ресторан")
+            .name-group.form-group
+                input(type="text" placeholder="Ваше имя")
+            .guest-group.form-group
+                select#guests(name="guests")
+                    option(value="0") Выберите количество
+                    option(value="1") 1 гость
+                    option(value="2") 2 гостя
+                    option(value="3") 6+ гостей
+                    option(value="4") 10 + гостей
+            .email-group.form-group
+                input(type="email" placeholder="Email адрес")
+            .phone-group.form-group
+                input(type="tel" placeholder="Номер телефона")
+            .comment-group.form-group
+                input(type="text" placeholder="Здесь можно написать ваши пожелания")
+            .button-book
+                button.btn(type="submit") Заказать

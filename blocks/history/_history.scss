@@ -5,6 +5,7 @@
 }
 .history {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 122px;
     &__text {
@@ -55,23 +56,32 @@
 .photos-item {
     img {
         position: absolute;
+        display: block;
     }
 }
 #first {
     z-index: 2;
     top: 198px;
     left: 285px;
+    transition: 1s;
 }
 #second {
     top: 72px;
     z-index: 2;
     left: 0px;
+    transition: 1s;
 }
 #third {
     top: 0px;
     left: 190px;
     z-index: 1;
+    transition: 1s;
 }
+#first:hover, #second:hover, #third:hover {
+    z-index: 4;
+    transform: scale(1.1);
+}
+
 #forth {
     top: 34px;
     left: 285px;

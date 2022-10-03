@@ -1,3 +1,6 @@
 mixin button(content)
     div(class=`button_type_${content.type}`)
-        button(class=`btn-${content.type}`)=content.text
+        if content.atributes
+            button(data-atr=`${content.name_atr}` class=`btn-${content.type}`)=content.text
+        else
+            button(class=`btn-${content.type}`)=content.text
