@@ -3,7 +3,6 @@
 // 768px
 // 480px
 // 320px
-
 ////////ОБНУЛЕНИЕ//////
 *{padding: 0;margin: 0;border: 0;}
 *,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
@@ -21,13 +20,21 @@ ul li{list-style: none;}
 img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 
+@import './css/variables';
+
 .wrapper {
      width: 100%;
      background-image: url(./assets/img/background.png);
      height: 800px;
      background-repeat: no-repeat;
-     background-size: 100%;
+     background-size: cover;
     
+}
+
+.header, .banner__container, .cook__container, .offer__container,
+.feedback__container, .galery__container, .information__container, .menu__container
+ {
+     max-width: $max-width;
 }
 
 .greeting {
@@ -39,6 +46,13 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
           font-weight: 400;
       }
 }
+
+@media (max-width: 991px) {
+     .greeting {
+          width: 100%;
+     }
+}
+
 .text-welcome { 
      color: #FF7400;
      font-size: 5rem;
@@ -108,20 +122,25 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
      }
 }
 
-.info {
+.about {
      display: flex;
      flex-wrap: wrap;
      justify-content: space-between;
      margin-top: 10%;
 }
+@media (max-width: 768px) {
+    .header__about {
+     flex-direction: column;
+    } 
+}
 @media (max-width: 320px) {
-     .header__info {
+     .header__about {
           flex-direction: column;
           align-items: center
      }
 }
 
-@media (max-width:991px) {
+@media (max-width:320px) {
      .text-welcome {
           font-size: 2.5rem;
      }
@@ -138,6 +157,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 .menu {
      background-image: url('./assets/img/background__menu.png');
      padding: 100px 0 226px;
+     background-size: cover;
 
 }
 
@@ -168,11 +188,16 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 }
 
 
-@import './blocks/button/button';
+@import './components/button/button';
 
-@import './blocks/title/title';
+@import './components/title/title';
 
-@import './components/card';
+@import './components/card/card';
+
+.card {
+     flex-basis: 33.3333%;
+     padding: 0.8rem;
+}
 
 @import './blocks/banner/banner';
 

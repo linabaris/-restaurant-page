@@ -1,13 +1,22 @@
 .offer {
     &__container {
-        max-width: 1129px;
         padding: 0 5px;
         margin: 0 auto;
     }
 
     &__body {
         display: flex;
+        flex-wrap: wrap;
         gap: 30px;
+    }
+    &__photo {
+        position: relative;
+        width: 40%;
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
     }
     &__list {
         display: flex;
@@ -25,11 +34,7 @@
             justify-content: space-between;
         }
         span {
-            font-family: 'Tinos';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 26px;
-            line-height: 30px;
+            @include text;
             width: 100%;
         }
 
@@ -37,6 +42,7 @@
 }
 .text {
     display: flex;
+    justify-content: space-between;
 }
 .price {
     text-align: end;
@@ -70,4 +76,13 @@
         gap: 87px;
     }
 
+}
+
+@media (max-width: 991px) {
+    .offer__photo {
+        display: none;
+    }
+    .offer__item {
+        margin: 1% 0;
+    }
 }

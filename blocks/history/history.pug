@@ -1,5 +1,5 @@
-include ../button/button.pug
-include ../title/title.pug
+include ../../components/button/button.pug
+include ../../components/title/title.pug
 .information(id='about')
     .information__container
         .history
@@ -14,11 +14,7 @@ include ../title/title.pug
                     .numbers 71
                         span Закуски
             .history__photos
-                .photos-item 
-                    img#first(src="./assets/img/history1.png" alt="photo")
-                .photos-item
-                    img#second(src="./assets/img/history2.png" alt="photo")
-                .photos-item
-                    img#third(src="./assets/img/history3.png" alt="photo")
-                .photos-item
-                    img#forth(src="./assets/img/history4.png" alt="photo")
+                img#first(src="./assets/img/history1.png" alt="photo" class="photos-item")
+                img#second(src="./assets/img/history2.png" alt="photo" class="photos-item")
+                img#third(src="./assets/img/history3.png" alt="photo" class="photos-item")
+                img#forth(src="./assets/img/history4.png" alt="photo" class="photos-item")

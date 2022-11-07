@@ -27,12 +27,32 @@ $(".nav__list a").on("click", function() {
     return false;
 });
 
+// open modal window to book, close modal window
 $(".button_type_book button").on("click", function() {
     let target = $('.' + $(this).attr('data-atr'));
     $(target).addClass('show');
     $('.wrapper').css('filter', 'blur(5px)');
+
+    $('.modal__btn_close img').click(function () {
+        $(target).removeClass('show');
+        $('.wrapper').css('filter', 'blur(0)');
+        return false
+    })
+    
+    $(".modal").click(function() {
+        $(target).removeClass("show");
+        $('.wrapper').css('filter', 'blur(0)');
+        return false;
+
+    })
+
+    $(".modal__container").click(function(evt) {
+        evt.stopPropagation();
+    })
+
     return false;
 })
+
 
 $('.scrollUp-btn').hide();
 $(function() {
@@ -51,25 +71,18 @@ $(function() {
     })
 })
 
-//добавляем продукт в корзину
-const updateLocalStorage = function () {
-    try {
-        localStorage.setItem('products', JSON.stringify(products));
-    } catch(e) {
-        if(e == QUOTA_EXCEEDED_ERR) {
-            alert('Out of limit');
-        };
-    };
-};
-
+//add products to cart
+let sum = $('.sum').text();
 $('.button_type_order button').on('click', function() {
     let name = $(this).closest('.menu__card').children('.card__title').text();
     let price = $(this).closest('.menu__card').children('.card__img').children('.card__img-price').text();
     let url = $(this).closest('.menu__card').children('.card__img').children('.img-round').attr('src');
+    
+    let newSum = Number(sum) + Number(price);
 
-    console.log('name', name, 'url', url);
+    console.log(newSum)
 
-    let products = [];
+    String(newSum).insertAfter(sum);
 
 
     let item = `

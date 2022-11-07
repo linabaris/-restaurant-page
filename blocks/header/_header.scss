@@ -1,5 +1,4 @@
 .header {
-    max-width: 1129px;
     margin: 0 auto;
     padding: 0 5px;
    &__menu {
@@ -11,6 +10,12 @@
    &__logo { 
        //margin-right: 24.5%;
        flex-grow: 1;
+       img {
+        transition: transform .8s ease-in-out;
+       }
+       img:hover {
+        transform: rotate(360deg);
+       }
    }
    &__nav {
     justify-content: space-between;
@@ -32,13 +37,6 @@
         flex-wrap: wrap;
         height: 100%;
     }
-    &__list:after {
-        content: "";
-        display: block;
-        height: 50px;
-        width:2px;
-        background: #E5E5E5;
-    }
 	&__item {
           margin-right: 25px;
           a {
@@ -47,7 +45,7 @@
                font-weight: 700;
                font-size: 14px;
                line-height: 19px;
-               color: #fff;
+               color: $white;
             }
     }
 }
@@ -58,9 +56,7 @@
       }
 	&__number {
           span {
-               font-family: 'Open Sans';
-               font-style: normal;
-               font-weight: 700;
+               @include text-bold;
                font-size: 18px;
                line-height: 25px;
                color: #fff;
@@ -75,7 +71,7 @@
                font-weight: 400;
                font-size: 14px;
                line-height: 19px;
-               color: #fff;
+               color: $white;
           }
       }
 	&__btn {
@@ -88,6 +84,15 @@
 
     &__contact {
         padding: 0 2rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .actions__text, .actions__number {
+        display: none;
+    }
+    .telephone-icon {
+        margin-top: 50%;
     }
 }
 

@@ -1,0 +1,23 @@
+// main: style.scss
+
+$orange:  #D67E34;
+$white: #FFFFFF;
+$max-width: 1129px;
+
+@mixin text {
+    font: {
+        family: "Tinos";
+        style: normal;
+        size: 26px;
+        weight: 400;
+    }
+    line-height: 30px;
+}
+@mixin text-bold {
+    font: {
+        family: "Open Sans";
+        style: normal;
+        weight: 700;
+    }
+}
+//Adaptive

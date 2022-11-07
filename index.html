@@ -50,7 +50,7 @@
             <button class="btn-menu">VIEW MENU</button>
           </div>
         </div>
-        <div class="header__info info">
+        <div class="header__about about">
           <div class="card card__info">
             <div class="card__container">
               <div class="card__img"> <img src="./assets/icons/dish.svg" alt="graphic"/></div>
@@ -86,12 +86,7 @@
                 <div class="numbers">71<span>Закуски</span></div>
               </div>
             </div>
-            <div class="history__photos">
-              <div class="photos-item"> <img id="first" src="./assets/img/history1.png" alt="photo"></div>
-              <div class="photos-item"><img id="second" src="./assets/img/history2.png" alt="photo"></div>
-              <div class="photos-item"><img id="third" src="./assets/img/history3.png" alt="photo"></div>
-              <div class="photos-item"><img id="forth" src="./assets/img/history4.png" alt="photo"></div>
-            </div>
+            <div class="history__photos"><img class="photos-item" id="first" src="./assets/img/history1.png" alt="photo"><img class="photos-item" id="second" src="./assets/img/history2.png" alt="photo"><img class="photos-item" id="third" src="./assets/img/history3.png" alt="photo"><img class="photos-item" id="forth" src="./assets/img/history4.png" alt="photo"></div>
           </div>
         </div>
       </div><!-- подклчение раздела баннер -->
@@ -206,13 +201,11 @@
         </div>
       </div>
       <footer class="footer"><img src="./assets/img/background_footer.png" alt=""></footer>
-      <div class="scrollUp-btn">
-        <a href="#top"><span></span>Вверх</a>
-      </div>
-    </div>
-    <!-- подклчение модального окна -->
+      <div class="scrollUp-btn"><a href="#top">Вверх</a></div>
+    </div><!-- подклчение модального окна -->
     <div class="modal trigger">
       <div class="modal__container">
+        <div class="modal__btn_close"><img src="./assets/icons/close.svg" alt="close"></div>
         <div class="modal__header"><span class="header__title_big">Бронирование</span><span class="header__title_mid">Заказать стол</span></div>
         <div class="modal__text"><span class="modal__text_terms">При бронировании стола в пятницу, субботу, воскресенье и праздничные дни, а также всем компаниям от 6 человек, включается 10% от суммы чека по правилам бронирования</span></div>
         <form class="modal__form" action="">
@@ -249,9 +242,8 @@
     <div class="cart hidden">
       <div class="cart__container"> 
         <div class="cart__close-btn"><a href="#"><img src="./assets/icons/close.svg" alt="close"></a></div>
-        <div class="cart__list-wrapper">
-        </div>
-        <div class="cart__check"><span class="check">Итого</span></div>
+        <div class="cart__list-wrapper"></div>
+        <div class="cart__check"><span class="check">Итого</span><span class="sum">0</span></div>
         <div class="cart__actions">
           <div class="cart__pay-btn">
             <button class="pay-btn">ОПЛАТИТЬ</button>

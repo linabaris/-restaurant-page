@@ -1,5 +1,5 @@
-include ./blocks/button/button.pug
-include ./components/card.pug
+include ./components/button/button.pug
+include ./components/card/card.pug
 doctype html
 html(lang="en")
     head
@@ -22,7 +22,7 @@ html(lang="en")
                         .text__tagline
                             span ДОМ ЛУЧШЕЙ ЕДЫ
                     +button({type:'menu', text:'VIEW MENU'})
-                .header__info.info
+                .header__about.about
                     +card({type:'info', url:'./assets/icons/dish.svg', black:'Магическая ', beige:'Атмосфера', text:'В нашем заведении царит магическая атмосфера наполненная вкусными ароматами'})
                     +card({type:'info', url:'./assets/icons/dish.svg', black:'Лучшее качество ', beige:'Еды', text:'Качество нашей Еды - отменное!'})
                     +card({type:'info', url:'./assets/icons/dish.svg', black:'Недорогая ', beige:'Еда', text:'Стоимость нашей Еды зависит только от ее количества. Качество всегда на высоте!'})
