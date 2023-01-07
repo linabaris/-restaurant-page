@@ -22,10 +22,14 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 
 @import './css/variables';
 
+body {
+     font-family: 'Open Sans', sans-serif;
+}
+
 .wrapper {
      width: 100%;
      background-image: url(./assets/img/background.png);
-     height: 800px;
+     height: 90vh;
      background-repeat: no-repeat;
      background-size: cover;
     
@@ -60,12 +64,26 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
      padding: 14.3rem 0 0;
      text-align: center;
 }
+@media (max-width: 480px) {
+     .text-welcome {
+          padding: 10rem 0 0;
+     }
+}
+
 .text-big {
      color: #FF7400;
      font-size: 8rem;
      line-height: 92px;
      text-align: center;
- }
+}
+
+@media (max-width: 480px) {
+     .text-big {
+          font-size: 6rem;
+          line-height: 60px;
+     }
+}
+
 .text__tagline {
      span {
           color: #fff;
@@ -76,7 +94,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
           line-height: 25px;
           text-align: center;
           margin: 12px 0 0;
-          padding: 0 5%;
+          padding: 0 3%;
      }
 }
 
@@ -87,6 +105,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
      width: 100%;
 }
 .text__tagline:before, .text__tagline:after {
+     margin-top: 1rem;
      content: "";
      display: block;
      height: 1px;
@@ -98,9 +117,11 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
      display: block;
      margin: 21px auto 0;
 }
-.footer img{
-     width: 100%;
-}
+.footer {
+     img{
+          width: 100%;
+     }
+} 
 //btn scrollTop 
 .scrollUp-btn {
      position: fixed;
@@ -126,7 +147,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
      display: flex;
      flex-wrap: wrap;
      justify-content: space-between;
-     margin-top: 10%;
+     margin-top: 15rem;
 }
 @media (max-width: 768px) {
     .header__about {
@@ -223,4 +244,6 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 
 @import './blocks/modal/modal';
 
-@import './blocks/cart/cart'
+@import './blocks/cart/cart';
+
+@import './blocks/feedback-modal/feedback-modal';

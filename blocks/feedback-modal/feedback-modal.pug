@@ -1,0 +1,16 @@
+include ../../components/button/button.pug
+.feedback-modal.feedback-trigger
+    .feedback-modal__container
+        .feedback-modal__btn_close
+            img(src="./assets/icons/close.svg", alt="close")
+        .feedback-modal__header
+            span.header__title_big Оставить отзыв
+        form.feedback-modal__form(action="")
+            .name-group.form-group
+                input#name(type="text" placeholder="Ваше имя")
+            .email-group.form-group
+                input#email(type="email" placeholder="Email адрес")
+            .comment-group.form-group
+                textarea(placeholder="Напишите свой отзыв" name="feedback")
+            .button-book
+                +button({type:'banner', text:'ОТПРАВИТЬ'})

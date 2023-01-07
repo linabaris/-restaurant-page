@@ -1,3 +1,4 @@
+include ../../components/button/button.pug
 .feedback
     .feedback__container
         .feedback__text Я надолго запомню мой День рождения, проведённый в этом ресторане! Кусочек родной Армении!!! Отдельное спасибо за комплепент в виде фруктовой тарелки. Будем рекомендовать этот ресторан своим друзьям и родственникам также за рубежом, путешествующих в Санкт-Петербург!!!
@@ -10,4 +11,6 @@
         .feedback__slider
             .feedback__slider-item
             .feedback__slider-item
-            .feedback__slider-item.active   
+            .feedback__slider-item.active
+        .feedback__button 
+            +button({type:'feedback', text:'ОСТАВИТЬ ОТЗЫВ', atributes: true, name_atr:'.feedback-trigger'})

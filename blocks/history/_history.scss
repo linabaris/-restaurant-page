@@ -21,7 +21,7 @@
             line-height: 22px;
             text-align: center;
             color: #656363;
-            padding-bottom: 60px;
+            padding: 0 10px 60px;
 
         }
         &-numbers {
@@ -87,6 +87,41 @@
     left: 285px;
 }
 
+@media (max-width: 768px) {
+    .history {
+        flex-direction: column;
+        align-items: center;
+        &__text {
+            width: 100%;
+        }
+    }
+    .history__photos {
+        left: -6.5rem;
+        width: 400px;
+        height: 400px;
+        transform: scale(0.5);
+    }
+    // .photos-item {
+    //     transform: scale(0.7);
+    // }
+    // #first {
+    //     top: 133px;
+    //     left: 220px;
+    // }
+    // #second {
+    //     top: 72px;
+    //     left: 0px;
+    // }
+    // #third {
+    //     top: 12px;
+    //     left: 110px;
+    // }
+    // #forth {
+    //     top: 39px;
+    //     left: 238px;
+    // }
+}
+
 @media (max-width: 320px) {
     .history {
         flex-direction: column;
@@ -95,7 +130,7 @@
         }
     }
     .history__photos {
-        transform: scale(0.55);
-        margin: 0 -115px;
+        transform: scale(0.6);
+        
     }
 }

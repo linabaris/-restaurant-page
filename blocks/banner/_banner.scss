@@ -1,6 +1,6 @@
 .banner {
     background: 
-        linear-gradient(rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0.8)),
+        linear-gradient(rgba(22, 21, 21, 0.865), rgba(0, 0, 0, 0.939)),
         url(./assets/img/background_history.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -13,8 +13,8 @@
         justify-content: space-between;
     }
     &__text {
-        width: 601px;
-        height: 173px;
+        width: 99%;
+        height: 50%;
         &_big {
             font-family: 'Tinos';
             font-style: normal;
@@ -46,4 +46,28 @@
             flex-wrap: wrap;
         }
     } 
+}
+
+@media (max-width:480px) {
+    .banner__container {
+        height: 400px;
+        flex-wrap: wrap;
+    }
+    .banner__text_big {
+        font-size: 30px;
+        line-height: 34px;
+    }
+    .banner__text_adv {
+        font-size: 17px;
+    }
+}
+
+@media (max-width:768px) {
+    .banner__container {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .banner__text {
+        text-align: center;
+    }
 }

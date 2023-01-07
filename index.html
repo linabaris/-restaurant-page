@@ -15,20 +15,13 @@
       <header class="header">
         <div class="header__menu"> 
           <div class="header__logo logo"><img src="./assets/icons/LOGO.svg" alt="logo"></div>
-          <div class="header__nav nav">
-            <ul class="nav__list">
-              <li class="nav__item"><a href="#">ГЛАВНАЯ </a></li>
-              <li class="nav__item"><a href="#menu">МЕНЮ</a></li>
-              <li class="nav__item"><a href="#about">О НАС</a></li>
-              <li class="nav__item"><a href="#book">БРОНЬ</a></li>
-              <li class="nav__item"><a class="nav__cart cart__icon" href="#" data-trigger=".cart"><img class="nav__cart-icons" src="./assets/icons/cart.svg" alt="cart" width="30px" height="30px"></a></li>
-            </ul>
-          </div>
+          <div class="header__nav nav"><a class="nav__item" href="#">ГЛАВНАЯ </a><a class="nav__item" href="#menu">МЕНЮ</a><a class="nav__item" href="#about">О НАС</a><a class="nav__item" href="#book">БРОНЬ</a></div>
+          <div class="header__cart" data-trigger=".cart"> <a href="#"><img class="cart-icon" src="./assets/icons/cart.svg" alt="cart" width="30px" height="30px"></a></div>
           <div class="header__actions actions">
             <div class="actions__contact">
               <div class="actions__telephone">
                 <div class="actions__icon telephone-icon"><img src="./assets/icons/phone.svg" alt="telephone"></div>
-                <div class="actions__number"><span>+999-888-76-54</span></div>
+                <div class="actions__number"><a href="*"> +999-888-76-54</a></div>
               </div>
               <div class="actions__text"><span>Свяжитесь с нами для бронирования</span></div>
             </div>
@@ -173,7 +166,12 @@
           <div class="feedback__slider">
             <div class="feedback__slider-item"></div>
             <div class="feedback__slider-item"></div>
-            <div class="feedback__slider-item active">  </div>
+            <div class="feedback__slider-item active"></div>
+          </div>
+          <div class="feedback__button"> 
+                  <div class="button_type_feedback">
+                    <button class="btn-feedback" data-atr=".feedback-trigger">ОСТАВИТЬ ОТЗЫВ</button>
+                  </div>
           </div>
         </div>
       </div><!-- подклчение раздела галерея -->
@@ -209,11 +207,8 @@
         <div class="modal__header"><span class="header__title_big">Бронирование</span><span class="header__title_mid">Заказать стол</span></div>
         <div class="modal__text"><span class="modal__text_terms">При бронировании стола в пятницу, субботу, воскресенье и праздничные дни, а также всем компаниям от 6 человек, включается 10% от суммы чека по правилам бронирования</span></div>
         <form class="modal__form" action="">
-          <div class="rest-group form-group">
-            <input type="text" placeholder="Выберите ресторан">
-          </div>
           <div class="name-group form-group">
-            <input type="text" placeholder="Ваше имя">
+            <input id="name" type="text" placeholder="Ваше имя">
           </div>
           <div class="guest-group form-group">
             <select id="guests" name="guests">
@@ -225,10 +220,10 @@
             </select>
           </div>
           <div class="email-group form-group">
-            <input type="email" placeholder="Email адрес">
+            <input id="email" type="email" placeholder="Email адрес">
           </div>
           <div class="phone-group form-group">
-            <input type="tel" placeholder="Номер телефона">
+            <input id="phone" type="tel" placeholder="Номер телефона">
           </div>
           <div class="comment-group form-group">
             <input type="text" placeholder="Здесь можно написать ваши пожелания">
@@ -242,6 +237,7 @@
     <div class="cart hidden">
       <div class="cart__container"> 
         <div class="cart__close-btn"><a href="#"><img src="./assets/icons/close.svg" alt="close"></a></div>
+        <div class="cart__title"><span>Ваша корзина покупок</span></div>
         <div class="cart__list-wrapper"></div>
         <div class="cart__check"><span class="check">Итого</span><span class="sum">0</span></div>
         <div class="cart__actions">
@@ -249,6 +245,28 @@
             <button class="pay-btn">ОПЛАТИТЬ</button>
           </div>
         </div>
+      </div>
+    </div><!-- подклчение окна отзыв -->
+    <div class="feedback-modal feedback-trigger">
+      <div class="feedback-modal__container">
+        <div class="feedback-modal__btn_close"><img src="./assets/icons/close.svg" alt="close"></div>
+        <div class="feedback-modal__header"><span class="header__title_big">Оставить отзыв</span></div>
+        <form class="feedback-modal__form" action="">
+          <div class="name-group form-group">
+            <input id="name" type="text" placeholder="Ваше имя">
+          </div>
+          <div class="email-group form-group">
+            <input id="email" type="email" placeholder="Email адрес">
+          </div>
+          <div class="comment-group form-group">
+            <textarea placeholder="Напишите свой отзыв" name="feedback"></textarea>
+          </div>
+          <div class="button-book">
+                <div class="button_type_banner">
+                  <button class="btn-banner">ОТПРАВИТЬ</button>
+                </div>
+          </div>
+        </form>
       </div>
     </div>
   </body>

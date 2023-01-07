@@ -1,4 +1,4 @@
-.modal {
+.feedback-modal {
     display: none;
     background-color: transparent;
     position: fixed;
@@ -23,15 +23,14 @@
             cursor: pointer;
         }
     }
-    
 }
 .show {
     display: block;
 }
-.modal__container {
+.feedback-modal__container {
     box-shadow: 0 5px 15px rgb(0 0 0 / 50%);
     display: block;
-    max-width: 680px;
+    max-width: 30vw;
     margin: 30px auto;
     padding: 0 30px 20px;
     border-radius: 6px;
@@ -40,27 +39,11 @@
 .header__title_big {
     display: block;
     color: #FF7400;
-    font-size: 60px;
+    font-size: 45px;
     line-height: 67px;
     text-align: center;
 }
-.header__title_mid {
-    display: block;
-    color: #FF7400;
-    font-size: 50px;
-    line-height: 57px;
-    text-align: center
-}
-.modal__text {
-    margin: 15px 0;
-}
-.modal__text_terms {
-    font-family: 'Tinos' ,serif;
-    font-size: 18px;
-    line-height: normal;
-    color: #555;
-}
-.modal__form input, select{
+.feedback-modal__form input, select{
     font-family: 'Tinos' ,serif;
     width: 100%;
     height: 45px;
@@ -75,39 +58,12 @@
     :-ms-input-placeholder { color: #555; font-family: 'Tinos'}
     :-moz-placeholder { color: #555; font-family: 'Tinos'}
 }
- .modal__form option {
-    font-family: 'Tinos' ,serif;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #555;
-}
 .form-group {
     padding: 10px 0;
- }
-
-.button-book {
-    margin-top: 10px;
-    .btn {
-        width: 157px;
-        height: 47px;
-        background-color: #FF7400;
-        color: #fff;
-        border-radius: 4px;
-        font-family: 'Open Sans';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 19px;
-        box-shadow: inset 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
-        display: block;
-        margin: 0 auto;
-    }
-    .btn:active {
-        transform: scale(0.95);
-        box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
-    }
- }
-
+}
+.comment-group textarea{
+    width: 100%;
+}
 .has-error {
     border: red 2px solid;
 }
