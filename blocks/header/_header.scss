@@ -25,6 +25,9 @@
     &__burger {
         display: none;
     }
+    &__close-btn {
+        display: none;
+    }
 }
 .nav {
 	&__item {
@@ -108,6 +111,7 @@
     }
     .nav {
         display: none;
+        animation: topHide .3s ease;
         .nav__list {
             flex-direction: column;
             margin: 0 1rem;
@@ -131,9 +135,25 @@
                 }
             }
         }
+        &__item {
+            margin-right: 0px;
+        }
     }
-    .show {
+    .nav__show {
         display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        width: 100vw;
+        align-items: center;
+        padding: 10px 5px;
+        animation: topAppear .3s ease;
+        a {
+            color: #D67E34;
+            padding-bottom: 4px;
+        }
     }
     .header__logo {
         margin-right: 66%;
@@ -144,6 +164,7 @@
     }
     .header__burger {
         display: block;
+        width: 15%;
     }
     .burger__button {
         width: 31px;
@@ -154,6 +175,18 @@
     .header__menu {
         padding-top: 20px;
         justify-content: space-between;
+    }
+    .header__close-btn {
+        display: block;
+        width: 20px;
+        height: 20px;
+        margin-left: 85vw;
+        margin-bottom: 10px;
+        img {
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+        }
     }
 }
 @media (max-width: 480px) {
@@ -166,4 +199,10 @@
     .header__cart {
         border-right: none;
     }
+}
+
+@keyframes topAppear {
+    0% {transform: translateY(-80px)}
+    100% {transform: translateY(0)}
+    
 }

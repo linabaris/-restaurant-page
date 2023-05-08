@@ -102,3 +102,13 @@
     }
 
 }
+
+
+@media (max-width: 800px) {
+    .cart {
+        &__container {
+            max-width: 90vw;
+            margin: 0 auto;
+        }
+    }
+}

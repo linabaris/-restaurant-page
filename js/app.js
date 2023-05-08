@@ -51,9 +51,10 @@ $(function() {
 })
 
 // open modal window to book, close modal window
-$(".button_type_book button").on("click", function() {
+$(".button_type_book button, .btn-banner").on("click", function() {
     let target = $('.' + $(this).attr('data-atr'));
     $(target).addClass('show');
+    $('body').css('overflow-y:hidden');
     $('.wrapper').css('filter', 'blur(5px)');
 
     $('.modal__btn_close img').click(function () {
@@ -155,8 +156,15 @@ let validVar = {
 
 $("#navToggle").click(function (evt) {
     evt.preventDefault();
-    $(".nav").toggleClass('show');
+    $(".nav").toggleClass('nav__show');
     
+})
+
+// close burger menu 
+
+$(".header__close-btn").click(function (evt) {
+    evt.preventDefault();
+    $(".nav").removeClass("nav__show");
 })
 
 //open feedback form

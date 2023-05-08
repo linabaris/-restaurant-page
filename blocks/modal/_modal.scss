@@ -60,7 +60,7 @@
     line-height: normal;
     color: #555;
 }
-.modal__form input, select{
+.modal__form input, select {
     font-family: 'Tinos' ,serif;
     width: 100%;
     height: 45px;
@@ -70,17 +70,22 @@
     font-size: 14px;
     line-height: 1.42857143;
     color: #555;
-    ::-webkit-input-placeholder { color: #555; font-family: 'Tinos';}
-    ::-moz-placeholder { color: #555; font-family: 'Tinos'}
-    :-ms-input-placeholder { color: #555; font-family: 'Tinos'}
-    :-moz-placeholder { color: #555; font-family: 'Tinos'}
+    background-color: #fff;
+    // ::-webkit-input-placeholder { color: #555; font-family: 'Tinos'}
+    // ::-moz-placeholder { color: #555; font-family: 'Tinos'}
+    // :-ms-input-placeholder { color: #555; font-family: 'Tinos'}
+    // :-moz-placeholder { color: #555; font-family: 'Tinos'}
 }
- .modal__form option {
+.modal__form option {
     font-family: 'Tinos' ,serif;
     font-size: 14px;
     line-height: 1.42857143;
     color: #555;
 }
+.modal__form option:first-of-type {
+    color: #555;
+}
+
 .form-group {
     padding: 10px 0;
  }
@@ -110,4 +115,30 @@
 
 .has-error {
     border: red 2px solid;
+}
+.modal__form {
+    ::-webkit-input-placeholder { color: #555; font-family: 'Tinos'}
+    ::-moz-placeholder { color: #555; font-family: 'Tinos'; opacity:1}
+    :-ms-input-placeholder { color: #555; font-family: 'Tinos'}
+    :-moz-placeholder { color: #555; font-family: 'Tinos'; opacity:1}
+}
+
+@media (max-width: 800px) {
+    .modal {
+        width: 95%;
+        margin: 0 auto;
+        &__container {
+            width: 95%;
+            max-height: 90%;
+            overflow-y: scroll;
+            position: fixed;
+        }
+        &__btn_close {
+            max-width: 2.5rem;
+            max-height: 2.5rem;
+        }
+        .header__title_big, .header__title_mid  {
+            font-size: 4rem;
+        }
+    }
 }

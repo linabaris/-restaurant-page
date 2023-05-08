@@ -500,10 +500,10 @@ body {
 @media (max-width: 768px) {
   .history {
     flex-direction: column;
-    align-items: center;
+    align-items: none;
   }
   .history__text {
-    width: 100%;
+    width: 95%;
   }
   .history__photos {
     left: -6.5rem;
@@ -899,6 +899,9 @@ button:hover {
 .header__burger {
   display: none;
 }
+.header__close-btn {
+  display: none;
+}
 
 .nav__item {
   margin-right: 25px;
@@ -975,6 +978,7 @@ button:hover {
   }
   .nav {
     display: none;
+    animation: topHide 0.3s ease;
   }
   .nav .nav__list {
     flex-direction: column;
@@ -999,8 +1003,24 @@ button:hover {
   .nav .nav__list li a {
     font-size: 16px;
   }
-  .show {
+  .nav__item {
+    margin-right: 0px;
+  }
+  .nav__show {
     display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100vw;
+    align-items: center;
+    padding: 10px 5px;
+    animation: topAppear 0.3s ease;
+  }
+  .nav__show a {
+    color: #D67E34;
+    padding-bottom: 4px;
   }
   .header__logo {
     margin-right: 66%;
@@ -1011,6 +1031,7 @@ button:hover {
   }
   .header__burger {
     display: block;
+    width: 15%;
   }
   .burger__button {
     width: 31px;
@@ -1020,6 +1041,19 @@ button:hover {
   .header__menu {
     padding-top: 20px;
     justify-content: space-between;
+  }
+  .header__close-btn {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-left: 85vw;
+    margin-bottom: 10px;
+  }
+  .header__close-btn img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    width: 100%;
+    height: 100%;
   }
 }
 @media (max-width: 480px) {
@@ -1031,6 +1065,14 @@ button:hover {
   }
   .header__cart {
     border-right: none;
+  }
+}
+@keyframes topAppear {
+  0% {
+    transform: translateY(-80px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 @media (max-width: 320px) {
@@ -1126,28 +1168,17 @@ button:hover {
   font-size: 14px;
   line-height: 1.42857143;
   color: #555;
-}
-.modal__form input ::-webkit-input-placeholder, select ::-webkit-input-placeholder {
-  color: #555;
-  font-family: "Tinos";
-}
-.modal__form input ::-moz-placeholder, select ::-moz-placeholder {
-  color: #555;
-  font-family: "Tinos";
-}
-.modal__form input :-ms-input-placeholder, select :-ms-input-placeholder {
-  color: #555;
-  font-family: "Tinos";
-}
-.modal__form input :-moz-placeholder, select :-moz-placeholder {
-  color: #555;
-  font-family: "Tinos";
+  background-color: #fff;
 }
 
 .modal__form option {
   font-family: "Tinos", serif;
   font-size: 14px;
   line-height: 1.42857143;
+  color: #555;
+}
+
+.modal__form option:first-of-type {
   color: #555;
 }
 
@@ -1182,6 +1213,44 @@ button:hover {
   border: red 2px solid;
 }
 
+.modal__form ::-webkit-input-placeholder {
+  color: #555;
+  font-family: "Tinos";
+}
+.modal__form ::-moz-placeholder {
+  color: #555;
+  font-family: "Tinos";
+  opacity: 1;
+}
+.modal__form :-ms-input-placeholder {
+  color: #555;
+  font-family: "Tinos";
+}
+.modal__form :-moz-placeholder {
+  color: #555;
+  font-family: "Tinos";
+  opacity: 1;
+}
+
+@media (max-width: 800px) {
+  .modal {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .modal__container {
+    width: 95%;
+    max-height: 90%;
+    overflow-y: scroll;
+    position: fixed;
+  }
+  .modal__btn_close {
+    max-width: 2.5rem;
+    max-height: 2.5rem;
+  }
+  .modal .header__title_big, .modal .header__title_mid {
+    font-size: 4rem;
+  }
+}
 .hidden {
   display: none;
 }
@@ -1298,6 +1367,12 @@ button:hover {
   margin-left: 25%;
 }
 
+@media (max-width: 800px) {
+  .cart__container {
+    max-width: 90vw;
+    margin: 0 auto;
+  }
+}
 .feedback-modal {
   display: none;
   background-color: transparent;
@@ -1346,7 +1421,7 @@ button:hover {
   text-align: center;
 }
 
-.feedback-modal__form input, select {
+.feedback-modal__form input, .feedback-modal__form select, .feedback-modal__form textarea {
   font-family: "Tinos", serif;
   width: 100%;
   height: 45px;
@@ -1357,21 +1432,23 @@ button:hover {
   line-height: 1.42857143;
   color: #555;
 }
-.feedback-modal__form input ::-webkit-input-placeholder, select ::-webkit-input-placeholder {
+.feedback-modal__form ::-webkit-input-placeholder {
   color: #555;
   font-family: "Tinos";
 }
-.feedback-modal__form input ::-moz-placeholder, select ::-moz-placeholder {
+.feedback-modal__form ::-moz-placeholder {
+  color: #555;
+  font-family: "Tinos";
+  opacity: 1;
+}
+.feedback-modal__form :-ms-input-placeholder {
   color: #555;
   font-family: "Tinos";
 }
-.feedback-modal__form input :-ms-input-placeholder, select :-ms-input-placeholder {
+.feedback-modal__form :-moz-placeholder {
   color: #555;
   font-family: "Tinos";
-}
-.feedback-modal__form input :-moz-placeholder, select :-moz-placeholder {
-  color: #555;
-  font-family: "Tinos";
+  opacity: 1;
 }
 
 .form-group {
@@ -1384,4 +1461,17 @@ button:hover {
 
 .has-error {
   border: red 2px solid;
+}
+
+@media (max-width: 800px) {
+  .feedback-modal__container {
+    max-width: 80vw;
+  }
+  .feedback-modal .header__title_big {
+    font-size: 3rem;
+  }
+  .feedback-modal__btn_close {
+    max-width: 2.5rem;
+    max-height: 2.5rem;
+  }
 }/*# sourceMappingURL=style.css.map */

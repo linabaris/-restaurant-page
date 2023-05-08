@@ -2,10 +2,15 @@
     .header__logo.logo
         img(src="./assets/icons/LOGO.svg" alt="logo")
     .header__nav.nav
+        .header__close-btn
+            img(src="./assets/icons/close_color.svg", alt="close-btn")
         a.nav__item(href="#") ГЛАВНАЯ 
         a.nav__item(href="#menu") МЕНЮ
         a.nav__item(href="#about") О НАС
         a.nav__item(href="#book") БРОНЬ
+    .header__burger.burger
+        button.burger__button(type='button' id='navToggle')
+            img.burger__icon(src="./assets/icons/menu_burger.svg", alt="menu_burger")
     .header__cart(data-trigger=".cart") 
         a(href="#" )
             img.cart-icon(src="./assets/icons/cart.svg" alt="cart" width='30px' height='30px')
@@ -20,6 +25,3 @@
                 span Свяжитесь с нами для бронирования
         .actions__book
             +button({type:'book', text:'ЗАКАЗ СТОЛИКА', atributes: true, name_atr:'trigger'})
-    .header__burger.burger
-        button.burger__button(type='button' id='navToggle')
-            img.burger__icon(src="./assets/icons/menu_burger.svg", alt="menu_burger")

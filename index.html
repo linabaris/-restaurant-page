@@ -15,7 +15,12 @@
       <header class="header">
         <div class="header__menu"> 
           <div class="header__logo logo"><img src="./assets/icons/LOGO.svg" alt="logo"></div>
-          <div class="header__nav nav"><a class="nav__item" href="#">ГЛАВНАЯ </a><a class="nav__item" href="#menu">МЕНЮ</a><a class="nav__item" href="#about">О НАС</a><a class="nav__item" href="#book">БРОНЬ</a></div>
+          <div class="header__nav nav">
+            <div class="header__close-btn"><img src="./assets/icons/close_color.svg" alt="close-btn"></div><a class="nav__item" href="#">ГЛАВНАЯ </a><a class="nav__item" href="#menu">МЕНЮ</a><a class="nav__item" href="#about">О НАС</a><a class="nav__item" href="#book">БРОНЬ</a>
+          </div>
+          <div class="header__burger burger">
+            <button class="burger__button" type="button" id="navToggle"><img class="burger__icon" src="./assets/icons/menu_burger.svg" alt="menu_burger"></button>
+          </div>
           <div class="header__cart" data-trigger=".cart"> <a href="#"><img class="cart-icon" src="./assets/icons/cart.svg" alt="cart" width="30px" height="30px"></a></div>
           <div class="header__actions actions">
             <div class="actions__contact">
@@ -30,9 +35,6 @@
                 <button class="btn-book" data-atr="trigger">ЗАКАЗ СТОЛИКА</button>
               </div>
             </div>
-          </div>
-          <div class="header__burger burger">
-            <button class="burger__button" type="button" id="navToggle"><img class="burger__icon" src="./assets/icons/menu_burger.svg" alt="menu_burger"></button>
           </div>
         </div>
         <div class="header__greeting greeting">
@@ -90,7 +92,7 @@
             <div class="banner__text_adv">Только в этом месяце бизнес-ланч от 250 ₽</div>
           </div>
                 <div class="button_type_banner">
-                  <button class="btn-banner">ЗАКАЗ СТОЛИКА</button>
+                  <button class="btn-banner" data-atr="trigger">ЗАКАЗ СТОЛИКА</button>
                 </div>
         </div>
       </div><!-- подклчение раздела наши блюда -->

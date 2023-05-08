@@ -90,9 +90,9 @@
 @media (max-width: 768px) {
     .history {
         flex-direction: column;
-        align-items: center;
+        align-items: none;
         &__text {
-            width: 100%;
+            width: 95%;
         }
     }
     .history__photos {
